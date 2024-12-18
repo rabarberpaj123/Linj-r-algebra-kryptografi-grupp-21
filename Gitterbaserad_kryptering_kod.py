@@ -110,7 +110,7 @@ def run():
             msg = input()
 
             print("\n", "ditt krypterade meddelande skrivs ut i tmp.txt. Starta om programmet manuellt", "\n")
-            f = open("vektorer/tmp.txt", "w")
+            f = open("tmp.txt", "w")
             f.write(str(lattice_string(msg, key)))
             f.close
             return
@@ -118,7 +118,7 @@ def run():
             print("skriv in ett krypterat meddelande")
             tmp_input = input()
             if tmp_input == "kopiera":
-                f = open("vektorer/tmp.txt", "r")
+                f = open("tmp.txt", "r")
                 cipher = string_to_list_of_arrays(f.read())
             else:
                 cipher = string_to_list_of_arrays(input())
